@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subriya | Portfolio</title>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+
+        body {
+            color: white;
+            background: linear-gradient(-45deg, #1e3c72, #2a5298, #0f2027, #203a43);
+            background-size: 400% 400%;
+            animation: gradient 12s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+
+        nav {
+            position: fixed;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 60px;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.05);
+            z-index: 1000;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #00f7ff;
+        }
+
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        .profile-container {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            padding: 6px;
+            background: linear-gradient(45deg, #00f7ff, #ff00ff);
+            animation: rotateBorder 6s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        .profile-container img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        @keyframes rotateBorder {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .hero h1 {
+            font-size: 45px;
+        }
+
+        .hero span {
+            color: #00f7ff;
+        }
+
+
+        .typing {
+            margin-top: 10px;
+            width: 22ch;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid #00f7ff;
+            animation: typing 4s steps(22) infinite alternate,
+                blink .7s infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0
+            }
+
+            to {
+                width: 22ch
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent
+            }
+        }
+
+
+        .section {
+            padding: 100px 60px;
+            text-align: center;
+        }
+
+
+        .skill {
+            margin: 25px auto;
+            width: 60%;
+        }
+
+        .bar {
+            height: 10px;
+            background: #333;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .bar div {
+            height: 10px;
+            background: #00f7ff;
+            animation: load 3s forwards;
+        }
+
+        @keyframes load {
+            from {
+                width: 0
+            }
+        }
+
+        .projects {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .card {
+            width: 260px;
+            padding: 20px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            transition: 0.4s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 15px;
+            background: #00f7ff;
+            color: black;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: white;
+            transform: scale(1.1);
+        }
+
+        .contact {
+            padding: 80px;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        @media(max-width:768px) {
+            nav {
+                padding: 15px 20px;
+            }
+
+            .skill {
+                width: 90%;
+            }
+
+            .projects {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>hey i'm Subriya</h2>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://github.com/ki6707" target="_blank">GitHub</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="profile-container">
+            <img src="https://peaceful-scarlet-twnb7jqlqc.edgeone.app/my.jpeg" alt="Viji Photo">
+        </div>
+
+        <h1>Hello, I'm <span>Subriya</span></h1>
+        <h2 class="typing">Frontend Developer</h2>
+    </section>
+
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>I build responsive and animated websites using HTML and CSS.
+            Passionate about creating clean and interactive UI designs.</p>
+    </section>
+
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+
+        <div class="skill">
+            <p>HTML</p>
+            <div class="bar">
+                <div style="width:95%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <p>CSS</p>
+            <div class="bar">
+                <div style="width:90%"></div>
+            </div>
+        </div>
+    
+        <div class="skill">
+            <p>PYTHON</p>
+            <div class="bar">
+                <div style="width:90%"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <p>SQL</p>
+            <div class="bar">
+                <div style="width:90%"></div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+
+        <div class="projects">
+
+            <div class="card">
+                <h3>Weather App</h3>
+                <p>Modern weather UI with API concept.</p>
+                <a href="https://github.com/ki6707/weather-app/blob/main/index.html" class="btn" target="_blank">View
+                    Code</a>
+                <a href="https://weather-app-pink-omega-29.vercel.app/" class="btn" target="_blank">View Project</a>
+            </div>
+    </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>Email: subriya2007@gmail.com</p>
+    </section>
+
+    <footer>
+        © 2026 subriya | All Rights Reserved
+    </footer>
+
+</body>
+
+
+</html>
